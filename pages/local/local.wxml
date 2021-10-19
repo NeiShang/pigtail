@@ -1,0 +1,77 @@
+<view class="mainContainer">
+    <view >
+        <view class="playerA">
+            <view class="userInfo">
+                <image class="avatar" src="/images/4.jpg" />
+                <text class="userName">郝攸宿</text>
+            </view>
+            <view class="handCardAreaA">
+                <view class="cardSlot" data-index="Spade" data-player="A" bindtap="clickPlayerCard">
+                    <image src="{{playerASpade}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Heart" data-player="A" bindtap="clickPlayerCard">
+                    <image src="{{playerAHeart}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Club" data-player="A" bindtap="clickPlayerCard">
+                    <image src="{{playerAClub}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Diomond" data-player="A" bindtap="clickPlayerCard">
+                    <image src="{{playerADiomond}}" mode="aspectFit" class="image"/>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="buttonShow" wx:if="{{pickPlayerA==true}}">
+            <view class="{{cardSelected?'confirmButtonA':'disableA'}}"  hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>
+        </view>
+        <view class="buttonHide" wx:else></view>
+
+
+    </view>
+    
+
+    <view class="cardArea">
+        <view class="cardPool" bindtap="clickCard">
+            <view class="cardCountsA">{{turn}}</view>
+            <image src="{{cardPoolImage}}" mode="aspectFit" class="image"/>
+            <view class="cardCountsB">张数</view>
+        </view>
+        <view class="showArea">
+            <view class="cardCountsA">张数</view>
+            <image src="{{showAreaImage}}" mode="aspectFit" class="image"/>
+            <view class="cardCountsB">张数</view>
+        </view>
+    </view>
+    
+
+    <view >
+        <view class="buttonShow" wx:if="{{pickPlayerB==true}}">
+            <view class="{{cardSelected?'confirmButtonB':'disableB'}}" hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>
+        </view>
+        <view class="buttonHide" wx:else></view>
+        
+        
+        <view class="playerB">
+            <view class="userInfo">
+                <image class="avatar" src="/images/5.jpg" />
+                <text class="userName">邱美丽</text>
+            </view>
+            <view class="handCardAreaB">
+                <view class="cardSlot" data-index="Spade" data-player="B" bindtap="clickPlayerCard">
+                    <image src="{{playerBSpade}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Heart" data-player="B" bindtap="clickPlayerCard">
+                    <image src="{{playerBHeart}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Club" data-player="B" bindtap="clickPlayerCard">
+                    <image src="{{playerBClub}}" mode="aspectFit" class="image"/>
+                </view>
+                <view class="cardSlot" data-index="Diomond" data-player="B" bindtap="clickPlayerCard">
+                    <image src="{{playerBDiomond}}" mode="aspectFit" class="image"/>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

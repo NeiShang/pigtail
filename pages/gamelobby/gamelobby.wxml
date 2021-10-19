@@ -1,0 +1,18 @@
+<view>
+    <view class="userInfo">
+        <image class="avatar" src="/images/4.jpg" />
+        <text class="userName">郝攸宿</text>
+    </view>
+
+    <view class="container">
+        <view class="localGame" hover-class="small" hover-stay-time="40" bindtap="localGame">
+            <view >本地游戏</view>
+        </view>
+        <view class="onlineGame" hover-class="small" hover-stay-time="40" bindtap="onlineGame">
+            <view >线上对战</view>
+        </view>
+        <view class="aiGame" hover-class="small" hover-stay-time="40" bindtap="aiGame">
+            <view >人机对战</view>
+        </view>
+    </view>
+</view>

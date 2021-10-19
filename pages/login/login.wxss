@@ -1,0 +1,67 @@
+page{ 
+    height: 100%; 
+  } 
+   
+.container { 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;  
+    padding: 0; 
+    box-sizing: border-box; 
+    background-color: #FFFFFF;
+}  
+
+.loginImg{ 
+    width: 750rpx; 
+} 
+
+/*表单内容*/ 
+.loginFrom { 
+    margin-top: 20px; 
+    flex: auto; 
+    height:100%; 
+} 
+
+.inputView { 
+    background-color: #fff; 
+    line-height: 44px;
+} 
+
+/*输入框*/ 
+.loginLab { 
+    margin: 15px 15px 15px 10px; 
+    color: #545454; 
+    font-size: 14px;
+} 
+.inputText { 
+    flex: block; 
+    float: right; 
+    text-align: right; 
+    margin-right: 22px; 
+    margin-top: 11px; 
+    color: #545454; 
+    font-size: 14px ;
+    border-bottom: 1px solid;
+} 
+
+/*按钮*/ 
+.loginBtnView { 
+    width: 100%; 
+    height: auto; 
+    background-color: #FFFFFF; 
+} 
+
+.loginBtn { 
+    width: 80%; 
+    margin-top: 35px;
+} 
+.localGame{
+    text-decoration: underline;
+    text-align: right;
+}
+.localHover{
+    color:#1E90FF;
+    background-color: #FFFFFF;
+}
+
+

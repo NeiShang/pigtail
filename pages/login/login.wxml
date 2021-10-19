@@ -1,0 +1,28 @@
+<view class="container"> 
+  <view> 
+    <image class="loginImg" src="/images/loginLog.jpg"></image> 
+  </view> 
+  
+  <view class="loginFrom"> 
+    <!--账号--> 
+    <view class="inputView"> 
+      <label class="loginLab">账号</label> 
+      <input class="inputText" placeholder="请输入账号" placeholder-style="color:#cccccc" bindinput="phoneInput" /> 
+    </view> 
+ 
+    <!--密码--> 
+    <view class="inputView"> 
+      <label class="loginLab">密码</label> 
+      <input class="inputText" password="true" placeholder="请输入密码" placeholder-style="color:#cccccc" bindinput="passwordInput" /> 
+    </view> 
+ 
+    <!--按钮--> 
+    <view class="loginBtnView"> 
+      <button class="loginBtn" type="primary" bindtap="login">登录</button> 
+    </view> 
+    <navigator url="/pages/local/local" open-type="navigate">
+      <view class="localGame" hover-class="localHover">本地游戏</view>
+    </navigator>
+  </view> 
+  
+</view> 
