@@ -1,4 +1,4 @@
-// pages/gamelobby/gamelobby.js
+// pages/gamehall/gamehall.js
 Page({
 
     /**
@@ -7,22 +7,7 @@ Page({
     data: {
 
     },
-    localGame:function(){
-        wx.navigateTo({
-            url:"/pages/local/local"
-        })
-    },
-    onlineGame:function(){
 
-        wx.navigateTo({
-            url:"/pages/gamehall/gamehall"
-        })
-    },
-    aiGame:function(){
-        wx.navigateTo({
-            url:"/pages/PVE/PVE"
-        })
-    },
     /**
      * 生命周期函数--监听页面加载
      */

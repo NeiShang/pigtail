@@ -1,0 +1,76 @@
+page{
+    height: 100%;
+}
+.container{
+    padding: 100rpx 0;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+}
+.headline{
+    height: 40px;
+    width: 80px;
+    margin-right: 120px;
+    background-color: yellow;
+}
+.createRoom{
+    /* height: 40px;
+    width: 80px; */
+    margin: 0 15px;
+    width: 80px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: rgb(51, 85, 102);
+    box-shadow: 0 7px 0 #243c47;
+    
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    color: #fff;
+    
+}
+.searchBar{
+    display: flex;
+    margin: 30px;
+}
+.inputText{
+    float: right;
+    text-align: left;
+    font-size: 14px;
+    width: 120px;
+    border: 1px solid black;
+}
+.roomLab{
+    margin-right: 10px;
+}
+.enterRoom{
+    margin-left: 10px;
+}
+
+.roomList{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.roomStyle{
+    height: 80px;
+    width: 120px;
+    background-color: red;
+    margin: 20px;
+}
+
+.changePage{
+    display: flex;
+    margin: 30px;
+}
+.previousPage{
+    padding: 10px;
+}
+.currentPage{
+    padding: 10px;
+}
+.nextPage{
+    padding: 10px;
+}

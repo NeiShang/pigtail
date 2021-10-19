@@ -6,7 +6,8 @@
     "pages/gamelobby/gamelobby",
     "pages/PVP/PVP",
     "pages/PVE/PVE",
-    "pages/local/local"
+    "pages/local/local",
+    "pages/gamehall/gamehall"
   ],
   "window":{
     "backgroundTextStyle":"light",

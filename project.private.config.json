@@ -29,6 +29,12 @@
                     "pathName": "pages/local/local",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/gamehall/gamehall",
+                    "pathName": "pages/gamehall/gamehall",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
