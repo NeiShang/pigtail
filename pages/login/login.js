@@ -1,16 +1,34 @@
 // pages/login/login.js
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        student_id:"",
+        password:"",
     },
 
     login:function(){
-        wx.redirectTo({
-            url:"/pages/gamelobby/gamelobby"
+        console.log(this.data.student_id);
+        console.log(this.data.password);
+        console.log(typeof(this.data.student_id));
+        // wx.redirectTo({
+        //     url:"/pages/gamelobby/gamelobby"
+        // })
+        var student_id=this.data.student_id;
+        var password=this.data.password;
+        console.log(student_id)
+        wx.request({
+            url:"http://172.17.173.97:8080/api/user/login",
+            method:"POST",
+            data:{
+                student_id: student_id,
+                password: password,
+            },
+            header: {
+                "Content-Type" : 'application/x-www-form-urlencoded '
+            },
+            success(res){
+                console.log(res.data)
+            }
         })
     },
     /**
