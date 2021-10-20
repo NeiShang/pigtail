@@ -7,15 +7,9 @@ Page({
     },
 
     login:function(){
-        console.log(this.data.student_id);
-        console.log(this.data.password);
-        console.log(typeof(this.data.student_id));
-        // wx.redirectTo({
-        //     url:"/pages/gamelobby/gamelobby"
-        // })
+
         var student_id=this.data.student_id;
         var password=this.data.password;
-        console.log(student_id)
         wx.request({
             url:"http://172.17.173.97:8080/api/user/login",
             method:"POST",
@@ -27,7 +21,32 @@ Page({
                 "Content-Type" : 'application/x-www-form-urlencoded '
             },
             success(res){
-                console.log(res.data)
+                console.log(res.data.data.token)
+                if(res.data.message=="Success"){
+                    wx.setStorage({
+                        key:"token",
+                        data:res.data.data.token
+                    })
+                    wx.redirectTo({
+                        url:"/pages/gamelobby/gamelobby"
+                    })
+                }
+                else{
+                    wx.showToast({
+                        title: '账号或密码错误，请重试',
+                        icon: 'none',
+                        duration: 1500
+                    })
+                }
+
+            },
+            fail(res){
+                console.log(res);
+                wx.showToast({
+                    title: '网络错误，请重试',
+                    icon: 'none',
+                    duration: 1500
+                })
             }
         })
     },
