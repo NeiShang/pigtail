@@ -1,3 +1,4 @@
+<image class='background' src="/images/gamehall.jpg" mode="aspectFill"></image>
 <view class="container">
     <view class="topBar">
         <view class="headline">游戏大厅</view>
