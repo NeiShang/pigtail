@@ -24,8 +24,8 @@ Page({
         pickPlayerB:false,
         cardSelected:false,
         isHandCard:false,
-        turn:0,
         suit:"",
+        turn:0,
         cardPoolImage:"/images/poker/back.jpg",
         showAreaImage:"/images/poker/back.jpg",
         playerASpade:"/images/poker/back.jpg",
@@ -61,16 +61,30 @@ Page({
     //点击玩家的手牌之后
     clickPlayerCard:function(para){
         var suit=para.currentTarget.dataset.index
+        var player=para.currentTarget.dataset.player
+        console.log(para);
+        console.log(suit);
+        console.log(player);
         if(this.data.pickPlayerA){
             if(!this.data.playerACard[suit][0]) return;
+            if(player!="A") return;
         }
         else{
             if(!this.data.playerBCard[suit][0]) return;
+            if(player!="B") return;
         }
         this.setData({
             cardSelected:true,
             isHandCard:true,
             suit:suit,
+        })
+    },
+    //用户点击取消后
+    clickCancel:function(){
+        this.setData({
+            cardSelected:false,
+            isHandCard:false,
+            suit:"",
         })
     },
 

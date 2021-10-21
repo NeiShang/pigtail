@@ -1,8 +1,9 @@
+
 <view class="mainContainer">
     <view >
         <view class="playerA">
             <view class="userInfo">
-                <image class="avatar" src="/images/4.jpg" />
+                <image class="{{pickPlayerA?'yourTurn':'avatar'}}" src="/images/4.jpg" />
                 <text class="userName">郝攸宿</text>
             </view>
             <view class="handCardAreaA">
@@ -23,7 +24,8 @@
 
 
         <view class="buttonShow" wx:if="{{pickPlayerA==true}}">
-            <view class="{{cardSelected?'confirmButtonA':'disableA'}}"  hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>
+            <view class="{{cardSelected?'cancelButtonA':'disableA'}}"  hover-class="small" hover-stay-time="40" bindtap="clickCancel">取消</view>
+            <view class="{{cardSelected?'confirmButtonA':'disableA'}}"  hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>       
         </view>
         <view class="buttonHide" wx:else></view>
 
@@ -48,18 +50,19 @@
     <view >
         <view class="buttonShow" wx:if="{{pickPlayerB==true}}">
             <view class="{{cardSelected?'confirmButtonB':'disableB'}}" hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>
+            <view class="{{cardSelected?'cancelButtonB':'disableB'}}"  hover-class="small" hover-stay-time="40" bindtap="clickCancel">取消</view>
         </view>
         <view class="buttonHide" wx:else></view>
         
         
         <view class="playerB">
             <view class="userInfo">
-                <image class="avatar" src="/images/5.jpg" />
+                <image class="{{pickPlayerB?'yourTurn':'avatar'}}" src="/images/5.jpg" />
                 <text class="userName">邱美丽</text>
             </view>
             <view class="handCardAreaB">
                 <view class="cardSlot" data-index="Spade" data-player="B" bindtap="clickPlayerCard">
-                    <image src="{{playerBSpade}}" mode="aspectFit" class="image"/>
+                    <image src="{{playerBSpade}}" mode="scaleToFill" class="image"/>
                 </view>
                 <view class="cardSlot" data-index="Heart" data-player="B" bindtap="clickPlayerCard">
                     <image src="{{playerBHeart}}" mode="aspectFit" class="image"/>
@@ -68,7 +71,7 @@
                     <image src="{{playerBClub}}" mode="aspectFit" class="image"/>
                 </view>
                 <view class="cardSlot" data-index="Diomond" data-player="B" bindtap="clickPlayerCard">
-                    <image src="{{playerBDiomond}}" mode="aspectFit" class="image"/>
+                    <image src="{{playerBDiomond}}" mode="aspectFit" class="imageTest"/>
                 </view>
             </view>
         </view>
