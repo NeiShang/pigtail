@@ -38,6 +38,35 @@ page{
     color: #fff;
     
 }
+
+/* 选中后的背景样式*/
+/*按钮的大小*/
+radio .wx-radio-input {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+  }
+  radio .wx-radio-input.wx-radio-input-checked {
+     /* 背景颜色 */
+    background-color: #fff!important; 
+    /* 边框颜色 */
+    border-color: #419dea!important;
+  }
+   
+  /* 选中后的实心样式*/
+  radio .wx-radio-input.wx-radio-input-checked::before {
+   /* 将对号去掉 */
+   content: ''; 
+   /*实心圆圈的大小*/
+   width: 18rpx;
+   height: 18rpx;
+   /*将圆角设置成50%才是一个圆*/
+   border-radius: 50%;
+   /*圆圈颜色*/
+   background-color: #419dea;
+  }
+  
+
 .searchBar{
     display: flex;
     margin: 30px;
@@ -57,15 +86,17 @@ page{
 }
 
 .roomList{
+    height: 360px;
+    width: 300px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: wrap;
+    justify-content: space-between;
 }
 .roomStyle{
     height: 80px;
     width: 120px;
     background-color: red;
-    margin: 20px;
+    margin: 10px;
     border-radius: 20px;
 }
 

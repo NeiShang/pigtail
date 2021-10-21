@@ -2,25 +2,32 @@
 <view class="container">
     <view class="topBar">
         <view class="headline">游戏大厅</view>
-        <view class="createRoom" hover-class="small" hover-stay-time="50">创建房间</view>
+        <view >
+            <view class="createRoom" hover-class="small" hover-stay-time="50" bindtap="createRoom">创建房间</view>
+            <radio-group bindchange="bandleChange" name="radio">
+                <radio value="public" checked="{{true}}"> 公有</radio>
+                <radio value="private"> 私有</radio>
+            </radio-group>
+        </view>
     </view>
 
     <view class="searchBar">
         <label class="roomLab">房间号:</label> 
-        <input class="inputText" placeholder="请输入房间号" placeholder-style="color:#cccccc" bindinput="phoneInput" /> 
-        <view class="enterRoom">加入房间</view>
+        <input class="inputText" model:value="{{uuid}}" placeholder="请输入房间号" placeholder-style="color:#cccccc" /> 
+        <view class="enterRoom" bindtap="enterRoom">加入房间</view>
     </view>
-    <view class="roomList">
-        <view class="roomStyle">房间</view>
-        <view class="roomStyle">房间</view>
-        <view class="roomStyle">房间</view>
-        <view class="roomStyle">房间</view>
-        <view class="roomStyle">房间</view>
-        <view class="roomStyle">房间</view>
+
+    <view class="roomList" >
+        <view class="roomStyle" wx:for="{{roomList}}" bindtap="joinRoom" data-number="{{index}}">
+            <view >房主：{{item.host_id}}</view>
+            <view >玩家：{{item.client_id}}</view>
+        </view>
     </view>
+       
+    
     <view class="changePage">
-        <view class="previousPage">上一页</view>
-        <view class="currentPage">当前页数</view>
-        <view class="nextPage">下一页</view>
+        <view class="previousPage" bindtap="clickPreviousPage">上一页</view>
+        <view class="currentPage">{{currentPage}}</view>
+        <view class="nextPage" bindtap="clickNextPage">下一页</view>
     </view>
 </view>
