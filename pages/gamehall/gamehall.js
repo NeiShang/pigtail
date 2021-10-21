@@ -15,14 +15,11 @@ Page({
     joinRoom:function(para){
         var roomNumber=para.currentTarget.dataset.number;
         var uuid=this.data.roomList[roomNumber].uuid;
-        console.log(uuid);
+        var path = "http://172.17.173.97:9000/api/game/"+uuid;
         var token=wx.getStorageSync("token");
         wx.request({
-            url:"http://172.17.173.97:9000/api/game/:uuid",
+            url:path,
             method:"POST",
-            data:{
-                uuid:uuid,
-            },
             header: {
                 "Content-Type" : 'application/x-www-form-urlencoded ',
                 "Authorization": token
@@ -57,15 +54,10 @@ Page({
     enterRoom:function(){
         var uuid=this.data.uuid;
         var token=wx.getStorageSync("token");
-        var path = "http://172.17.173.97:9000/api/game/:"+uuid;
-        console.log(uuid)
-        console.log(path);
+        var path = "http://172.17.173.97:9000/api/game/"+uuid;
         wx.request({
-            url:"http://172.17.173.97:9000/api/game/:uuid",
+            url:path,
             method:"POST",
-            data:{
-                uuid:uuid
-            },
             header: {
                 "Content-Type" : 'application/x-www-form-urlencoded ',
                 "Authorization": token
@@ -164,7 +156,6 @@ Page({
     clickNextPage:function(){
         var page=this.data.currentPage+1;
         var token=wx.getStorageSync("token");
-        console.log(token);
         var that=this;
         page=page.toString();
         wx.request({
