@@ -27,10 +27,13 @@ Page({
             success(res){
                 console.log(res.data);
                 if(res.data.code=="200"){
-                    // wx.redirectTo({
-                    //     url:"/pages/PVP/PVP"
-                    // })
-                    console.log("成功!")
+                    wx.setStorage({
+                        key:"uuid",
+                        data:uuid
+                    })
+                    wx.redirectTo({
+                        url:"/pages/PVP/PVP"
+                    })
                 }
                 else{
                     wx.showToast({
@@ -65,10 +68,13 @@ Page({
             success(res){
                 console.log(res.data);
                 if(res.data.code=="200"){
-                    // wx.redirectTo({
-                    //     url:"/pages/PVP/PVP"
-                    // })
-                    console.log("成功!")
+                    wx.setStorage({
+                        key:"uuid",
+                        data:uuid
+                    })
+                    wx.redirectTo({
+                        url:"/pages/PVP/PVP"
+                    })
                 }
                 else{
                     wx.showToast({
@@ -102,7 +108,22 @@ Page({
                 "Authorization": token
             },
             success(res){
-                console.log(res.data)
+                if(res.data.code=="200"){
+                    wx.setStorage({
+                        key:"uuid",
+                        data:res.data.data.uuid
+                    })
+                    wx.redirectTo({
+                        url:"/pages/PVP/PVP"
+                    })
+                }
+                else{
+                    wx.showToast({
+                        title: '创建房间失败，请重试',
+                        icon: 'none',
+                        duration: 1500
+                    })
+                }
             }
         })
     },

@@ -35,6 +35,12 @@
                     "pathName": "pages/gamehall/gamehall",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/PVP/PVP",
+                    "pathName": "pages/PVP/PVP",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

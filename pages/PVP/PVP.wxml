@@ -1,2 +1,77 @@
-<!--pages/PVP/PVP.wxml-->
-<text>pages/PVP/PVP.wxml</text>
+<view class="mainContainer">
+    <view >
+        <view class="player">
+            <view class="userInfo">
+                <image class="avatar" src="/images/4.jpg" />
+                <text class="userName">郝攸宿</text>
+            </view>
+            <view class="handCardArea">
+                <view class="cardSlot">
+                    <image src="{{playerASpade}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot" >
+                    <image src="{{playerAHeart}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot" >
+                    <image src="{{playerAClub}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot">
+                    <image src="{{playerADiomond}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+            </view>
+        </view>   
+    </view>
+    
+    <view ></view>
+
+    <view class="cardArea">
+        <view class="cardPool" bindtap="clickCard">
+            <image src="{{cardPoolImage}}" mode="aspectFit" class="image"/>
+            <view class="cardCounts">张数</view>
+        </view>
+        <view class="showArea">
+            <image src="{{showAreaImage}}" mode="aspectFit" class="image"/>
+            <view class="cardCounts">张数</view>
+        </view>
+    </view>
+    
+
+    <view >
+        <view class="buttonShow" wx:if="{{yourTurn==true}}">
+            <view class="{{cardSelected?'confirmButton':'disable'}}" hover-class="small" hover-stay-time="40" bindtap="clickConfirm">确定</view>
+            <view class="{{cardSelected?'cancelButton':'disable'}}"  hover-class="small" hover-stay-time="40" bindtap="clickCancel">取消</view>
+        </view>
+        <view class="buttonHide" wx:else></view>
+        
+        
+        <view class="player">
+            <view class="userInfo">
+                <image class="{{pickPlayerB?'yourTurn':'avatar'}}" src="/images/5.jpg" />
+                <text class="userName">邱美丽</text>
+            </view>
+            <view class="handCardArea">
+                <view class="cardSlot" data-index="Spade" bindtap="clickPlayerCard">
+                    <image src="{{playerBSpade}}" mode="scaleToFill" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot" data-index="Heart" bindtap="clickPlayerCard">
+                    <image src="{{playerBHeart}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot" data-index="Club" bindtap="clickPlayerCard">
+                    <image src="{{playerBClub}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+                <view class="cardSlot" data-index="Diomond" bindtap="clickPlayerCard">
+                    <image src="{{playerBDiomond}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">张数</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
