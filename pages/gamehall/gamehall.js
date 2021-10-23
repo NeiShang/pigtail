@@ -128,7 +128,7 @@ Page({
         })
     },
 
-    bandChange(e){
+    bandleChange(e){
         var isPrivate;
         if(e.detail.value=="public") isPrivate=false;
         else isPrivate=true;
