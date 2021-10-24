@@ -99,10 +99,12 @@ Page({
         })
     },
 
+
     //用户点击确定后
     clickConfirm:function(){
-        if(this.data.isHandCard) this.outCard();
-        else this.touchCard();
+        if(this.data.isHandCard) this.outCard();//执行出牌函数
+        else this.touchCard();//执行摸牌函数
+        //图片的渲染
         var showAreaImage="";
         var playerASpade="";
         var playerAHeart="";
@@ -146,24 +148,37 @@ Page({
             cardPoolCount:this.data.cardPool.length,
             cardShowCount:this.data.cardShowed.length,
         })
+        //判断游戏输赢
         if(this.data.cardPool.length==0){
-            wx.showToast({
-                title: '游戏结束',
-                icon: 'none',
-                duration: 1500
-            })
+            var countA=this.data.playerASpadeCount+this.data.playerAHeartCount+this.data.playerAClubCount+this.data.playerADiomondCount;
+            var countB=this.data.playerBSpadeCount+this.data.playerBHeartCount+this.data.playerBClubCount+this.data.playerBDiomondCount;
+            if(countA>countB){
+                wx.showToast({
+                    title: '游戏结束,下方玩家获胜',
+                    icon: 'none',
+                    duration: 10000
+                })
+            }
+            else if(countA<countB){
+                wx.showToast({
+                    title: '游戏结束,上方玩家获胜',
+                    icon: 'none',
+                    duration: 10000
+                })
+            }
+            else{
+                wx.showToast({
+                    title: '游戏结束,平局',
+                    icon: 'none',
+                    duration: 10000
+                })
+            }
             this.setData({
                 end:true,
                 pickPlayerA:false,
                 pickPlayerB:false,
             })
         }
-
-
-        console.log(this.data.cardPool)
-        console.log(this.data.cardShowed)
-        console.log(this.data.playerACard)
-        console.log(this.data.playerBCard)
     },
     
     //摸牌

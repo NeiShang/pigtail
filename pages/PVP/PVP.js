@@ -31,15 +31,25 @@ Page({
         end:false,
         firstReceived:false,
         cardPoolImage:"/images/poker/back.jpg",
-        showAreaImage:"/images/poker/back.jpg",
-        playerASpade:"/images/poker/back.jpg",
-        playerAHeart:"/images/poker/back.jpg",
-        playerAClub:"/images/poker/back.jpg",
-        playerADiomond:"/images/poker/back.jpg",
-        playerBSpade:"/images/poker/back.jpg",
-        playerBHeart:"/images/poker/back.jpg",
-        playerBClub:"/images/poker/back.jpg",
-        playerBDiomond:"/images/poker/back.jpg",
+        showAreaImage:"",
+        playerASpade:"",
+        playerAHeart:"",
+        playerAClub:"",
+        playerADiomond:"",
+        playerBSpade:"",
+        playerBHeart:"",
+        playerBClub:"",
+        playerBDiomond:"",
+        cardPoolCount:52,
+        cardShowCount:0,
+        playerASpadeCount:0,
+        playerAHeartCount:0,
+        playerAClubCount:0,
+        playerADiomondCount:0,
+        playerBSpadeCount:0,
+        playerBHeartCount:0,
+        playerBClubCount:0,
+        playerBDiomondCount:0,
     },
 
     //点击牌堆的牌之后
@@ -315,15 +325,15 @@ Page({
                 }
             }
         }
-        var showAreaImage="/images/poker/back.jpg";
-        var playerASpade="/images/poker/back.jpg";
-        var playerAHeart="/images/poker/back.jpg";
-        var playerAClub="/images/poker/back.jpg";
-        var playerADiomond="/images/poker/back.jpg";
-        var playerBSpade="/images/poker/back.jpg";
-        var playerBHeart="/images/poker/back.jpg";
-        var playerBClub="/images/poker/back.jpg";
-        var playerBDiomond="/images/poker/back.jpg";
+        var showAreaImage="";
+        var playerASpade="";
+        var playerAHeart="";
+        var playerAClub="";
+        var playerADiomond="";
+        var playerBSpade="";
+        var playerBHeart="";
+        var playerBClub="";
+        var playerBDiomond="";
         if (this.data.cardShowed[0]) showAreaImage="/images/poker/"+this.data.cardShowed[0]+".jpg";
         if(this.data.playerACard["Spade"][0]) playerASpade="/images/poker/"+ this.data.playerACard["Spade"][0]+".jpg";
         if(this.data.playerACard["Heart"][0]) playerAHeart="/images/poker/"+ this.data.playerACard["Heart"][0]+".jpg";
@@ -343,6 +353,16 @@ Page({
             playerBHeart: playerBHeart,
             playerBClub: playerBClub,
             playerBDiomond: playerBDiomond,
+            playerASpadeCount:this.data.playerACard["Spade"].length,
+            playerAHeartCount:this.data.playerACard["Heart"].length,
+            playerAClubCount:this.data.playerACard["Club"].length,
+            playerADiomondCount:this.data.playerACard["Diomond"].length,
+            playerBSpadeCount:this.data.playerBCard["Spade"].length,
+            playerBHeartCount:this.data.playerBCard["Heart"].length,
+            playerBClubCount:this.data.playerBCard["Club"].length,
+            playerBDiomondCount:this.data.playerBCard["Diomond"].length,
+            cardPoolCount:this.data.cardPool.length,
+            cardShowCount:this.data.cardShowed.length,
         })
     },
 

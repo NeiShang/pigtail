@@ -47,7 +47,6 @@ page{
 .handCardArea{
     height: 200rpx;
     width: 500rpx;
-    background-color:rgb(255, 255, 255);
     display: flex;
 }
 .cardSlot{
@@ -110,6 +109,10 @@ page{
     height: 100%;
 }
 
+.cardCounts{
+    font-weight: bold;
+    color: #fff;
+}
 
 /*选中牌的样式，未完成*/
 /* .imageTest{

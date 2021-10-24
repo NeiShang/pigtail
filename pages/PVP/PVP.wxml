@@ -1,26 +1,26 @@
+<image class='background' src="/images/local.jpg" mode="aspectFill"></image>
 <view class="mainContainer">
     <view >
         <view class="player">
             <view class="userInfo">
                 <image class="avatar" src="/images/4.jpg" />
-                <text class="userName">郝攸宿</text>
             </view>
             <view class="handCardArea">
                 <view class="cardSlot">
                     <image src="{{playerASpade}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerASpadeCount}}</view>
                 </view>
                 <view class="cardSlot" >
                     <image src="{{playerAHeart}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerAHeartCount}}</view>
                 </view>
                 <view class="cardSlot" >
                     <image src="{{playerAClub}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerAClubCount}}</view>
                 </view>
                 <view class="cardSlot">
                     <image src="{{playerADiomond}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerADiomondCount}}</view>
                 </view>
             </view>
         </view>   
@@ -31,11 +31,11 @@
     <view class="cardArea">
         <view class="cardPool" bindtap="clickCard">
             <image src="{{cardPoolImage}}" mode="aspectFit" class="image"/>
-            <view class="cardCounts">张数</view>
+            <view class="cardCounts">{{cardPoolCount}}</view>
         </view>
         <view class="showArea">
             <image src="{{showAreaImage}}" mode="aspectFit" class="image"/>
-            <view class="cardCounts">张数</view>
+            <view class="cardCounts">{{cardShowCount}}</view>
         </view>
     </view>
     
@@ -51,24 +51,23 @@
         <view class="player">
             <view class="userInfo">
                 <image class="{{pickPlayerB?'yourTurn':'avatar'}}" src="/images/5.jpg" />
-                <text class="userName">邱美丽</text>
             </view>
             <view class="handCardArea">
                 <view class="cardSlot" data-index="Spade" bindtap="clickPlayerCard">
                     <image src="{{playerBSpade}}" mode="scaleToFill" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerBSpadeCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Heart" bindtap="clickPlayerCard">
                     <image src="{{playerBHeart}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerBHeartCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Club" bindtap="clickPlayerCard">
                     <image src="{{playerBClub}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerBClubCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Diomond" bindtap="clickPlayerCard">
                     <image src="{{playerBDiomond}}" mode="aspectFit" class="image"/>
-                    <view class="cardCounts">张数</view>
+                    <view class="cardCounts">{{playerBDiomondCount}}</view>
                 </view>
             </view>
         </view>
