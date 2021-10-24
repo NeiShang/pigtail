@@ -16,27 +16,22 @@ page{
     display: flex;
     justify-content: space-between;
 }
-.headline{
-    height: 40px;
-    width: 80px;
-    margin-right: 120px;
-    background-color: yellow;
-}
 .createRoom{
-    /* height: 40px;
-    width: 80px; */
-    margin: 0 15px;
-    width: 80px;
-    height: 30px;
+    margin: 0 30rpx;
+    width: 160rpx;
+    height: 60rpx;
     box-sizing: border-box;
     background-color: rgb(51, 85, 102);
-    box-shadow: 0 7px 0 #243c47;
+    box-shadow: 0 14rpx 0 #243c47;
     
     text-align: center;
-    line-height: 30px;
-    border-radius: 10px;
+    line-height: 60rpx;
+    border-radius: 20rpx;
     color: #fff;
     
+}
+.radioGroup{
+    line-height: 60rpx;
 }
 
 /* 选中后的背景样式*/
@@ -69,47 +64,60 @@ radio .wx-radio-input {
 
 .searchBar{
     display: flex;
-    margin: 30px;
+    margin: 60rpx;
 }
 .inputText{
     float: right;
     text-align: left;
-    font-size: 14px;
-    width: 120px;
+    font-size: 28rpx;
+    width: 240rpx;
     border: 1px solid black;
 }
 .roomLab{
-    margin-right: 10px;
+    margin-right: 20rpx;
 }
 .enterRoom{
-    margin-left: 10px;
+    margin-left: 20rpx;
+    border-width: 0px; 
+	border-radius: 3px; 
+	background: #1E90FF; 
+	outline: none;
+	font-family: Microsoft YaHei; 
+	color: white; 
+    font-size: 15px; 
 }
-
 .roomList{
-    height: 360px;
-    width: 300px;
+    height: 720rpx;
+    width: 600rpx;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
 }
 .roomStyle{
-    height: 80px;
-    width: 120px;
-    background-color: red;
-    margin: 10px;
-    border-radius: 20px;
+    height: 160rpx;
+    width: 240rpx;
+    background-color: rgb(98, 126, 204);
+    margin: 20rpx;
+    border-radius: 40rpx;
+}
+
+.roomInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .changePage{
     display: flex;
-    margin: 30px;
+    margin: 60rpx;
 }
 .previousPage{
-    padding: 10px;
+    padding: 20rpx;
 }
 .currentPage{
-    padding: 10px;
+    padding: 20rpx;
 }
 .nextPage{
-    padding: 10px;
+    padding: 20rpx;
 }

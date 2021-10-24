@@ -27,15 +27,26 @@ Page({
         suit:"",
         turn:0,
         cardPoolImage:"/images/poker/back.jpg",
-        showAreaImage:"/images/poker/back.jpg",
-        playerASpade:"/images/poker/back.jpg",
-        playerAHeart:"/images/poker/back.jpg",
-        playerAClub:"/images/poker/back.jpg",
-        playerADiomond:"/images/poker/back.jpg",
-        playerBSpade:"/images/poker/back.jpg",
-        playerBHeart:"/images/poker/back.jpg",
-        playerBClub:"/images/poker/back.jpg",
-        playerBDiomond:"/images/poker/back.jpg",
+        showAreaImage:"",
+        playerASpade:"",
+        playerAHeart:"",
+        playerAClub:"",
+        playerADiomond:"",
+        playerBSpade:"",
+        playerBHeart:"",
+        playerBClub:"",
+        playerBDiomond:"",
+        end:false,
+        cardPoolCount:52,
+        cardShowCount:0,
+        playerASpadeCount:0,
+        playerAHeartCount:0,
+        playerAClubCount:0,
+        playerADiomondCount:0,
+        playerBSpadeCount:0,
+        playerBHeartCount:0,
+        playerBClubCount:0,
+        playerBDiomondCount:0,
     },
  
     //判断花色是否相同
@@ -92,15 +103,15 @@ Page({
     clickConfirm:function(){
         if(this.data.isHandCard) this.outCard();
         else this.touchCard();
-        var showAreaImage="/images/poker/back.jpg";
-        var playerASpade="/images/poker/back.jpg";
-        var playerAHeart="/images/poker/back.jpg";
-        var playerAClub="/images/poker/back.jpg";
-        var playerADiomond="/images/poker/back.jpg";
-        var playerBSpade="/images/poker/back.jpg";
-        var playerBHeart="/images/poker/back.jpg";
-        var playerBClub="/images/poker/back.jpg";
-        var playerBDiomond="/images/poker/back.jpg";
+        var showAreaImage="";
+        var playerASpade="";
+        var playerAHeart="";
+        var playerAClub="";
+        var playerADiomond="";
+        var playerBSpade="";
+        var playerBHeart="";
+        var playerBClub="";
+        var playerBDiomond="";
         if (this.data.cardShowed[0]) showAreaImage="/images/poker/"+this.data.cardShowed[0]+".jpg";
         if(this.data.playerACard["Spade"][0]) playerASpade="/images/poker/"+ this.data.playerACard["Spade"][0]+".jpg";
         if(this.data.playerACard["Heart"][0]) playerAHeart="/images/poker/"+ this.data.playerACard["Heart"][0]+".jpg";
@@ -124,8 +135,29 @@ Page({
             playerBHeart: playerBHeart,
             playerBClub: playerBClub,
             playerBDiomond: playerBDiomond,
+            playerASpadeCount:this.data.playerACard["Spade"].length,
+            playerAHeartCount:this.data.playerACard["Heart"].length,
+            playerAClubCount:this.data.playerACard["Club"].length,
+            playerADiomondCount:this.data.playerACard["Diomond"].length,
+            playerBSpadeCount:this.data.playerBCard["Spade"].length,
+            playerBHeartCount:this.data.playerBCard["Heart"].length,
+            playerBClubCount:this.data.playerBCard["Club"].length,
+            playerBDiomondCount:this.data.playerBCard["Diomond"].length,
+            cardPoolCount:this.data.cardPool.length,
+            cardShowCount:this.data.cardShowed.length,
         })
-
+        if(this.data.cardPool.length==0){
+            wx.showToast({
+                title: '游戏结束',
+                icon: 'none',
+                duration: 1500
+            })
+            this.setData({
+                end:true,
+                pickPlayerA:false,
+                pickPlayerB:false,
+            })
+        }
 
 
         console.log(this.data.cardPool)
@@ -269,7 +301,44 @@ Page({
         });
     },
     
-    
+    start:function(){
+        var number=Math.floor(Math.random() * 52);	// 返回 0 至 51 之间的数
+        this.setData({
+            cardPool:[
+                "C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","CJ","CQ","CK",
+                "D1","D2","D3","D4","D5","D6","D7","D8","D9","D10","DJ","DQ","DK",
+                "H1","H2","H3","H4","H5","H6","H7","H8","H9","H10","HJ","HQ","HK",
+                "S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","SJ","SQ","SK"
+            ],
+            index:number,
+            pickPlayerA:false,
+            pickPlayerB:true,
+            cardSelected:false,
+            isHandCard:false,
+            cardPoolImage:"/images/poker/back.jpg",
+            showAreaImage:"",
+            playerASpade:"",
+            playerAHeart:"",
+            playerAClub:"",
+            playerADiomond:"",
+            playerBSpade:"",
+            playerBHeart:"",
+            playerBClub:"",
+            playerBDiomond:"",
+            end:false,
+            cardPoolCount:52,
+            cardShowCount:0,
+            playerASpadeCount:0,
+            playerAHeartCount:0,
+            playerAClubCount:0,
+            playerADiomondCount:0,
+            playerBSpadeCount:0,
+            playerBHeartCount:0,
+            playerBClubCount:0,
+            playerBDiomondCount:0,
+        });
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -287,6 +356,17 @@ Page({
             pickPlayerB:true,
             cardSelected:false,
             isHandCard:false,
+            cardPoolImage:"/images/poker/back.jpg",
+            showAreaImage:"",
+            playerASpade:"",
+            playerAHeart:"",
+            playerAClub:"",
+            playerADiomond:"",
+            playerBSpade:"",
+            playerBHeart:"",
+            playerBClub:"",
+            playerBDiomond:"",
+            end:false,
         });
     },
 

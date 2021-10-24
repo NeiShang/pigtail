@@ -18,23 +18,23 @@ page{
 
 /*用户信息*/
 .userInfo{
-    height: 50px;
-    width: 110px;
-    margin-top: 20px;
+    height: 100rpx;
+    width: 220rpx;
+    margin-top: 40rpx;
     display: flex;
 }
 .avatar{
-    height: 50px;
-    width: 50px;
+    height: 100rpx;
+    width: 100rpx;
     border-radius: 50%;
 }
 .userName{
-    line-height: 50px;
-    margin-left: 10px;
+    line-height: 100rpx;
+    margin-left: 20rpx;
 }
 .yourTurn{
-    height: 50px;
-    width: 50px;
+    height: 100rpx;
+    width: 100rpx;
     border-radius: 50%;
     border:1px solid rgb(61, 71, 214);
 }
@@ -43,30 +43,28 @@ page{
 .playerA{
     transform: rotate(180deg);
     display: flex;
-    margin: 20px;
+    margin: 40rpx;
 }
 .playerB{
     display: flex;
-    margin: 20px;
+    margin: 40rpx;
 }
 .handCardAreaA{
-    height: 100px;
-    width: 250px;
-    background-color: rgb(255, 255, 255);
+    height: 200rpx;
+    width: 500rpx;
     display: flex;
 }
 .handCardAreaB{
-    height: 100px;
-    width: 250px;
-    background-color:rgb(255, 255, 255);
+    height: 200rpx;
+    width: 500rpx;
     display: flex;
 }
 .cardSlot{
-    width: 52px;
-    height: 75px;
-    margin: 5px;
+    width: 104rpx;
+    height: 150rpx;
+    margin: 10rpx;
     background-color: pink;
-    border-radius: 4px;
+    border-radius: 8rpx;
 }
 /*牌堆与卡池*/
 .cardArea{
@@ -74,65 +72,101 @@ page{
     justify-content: space-around;
 }
 .cardPool{
-    height: 200px;
-    width: 140px;
+    height: 400rpx;
+    width: 280rpx;
     display: flex;
     flex-direction: column;
 
 }
+.restartArea{
+    display: flex;
+    justify-content: center;        
+    align-items:center;  
+}
+.restartBtn{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50%;
+    background-color: rgb(42, 162, 199);
+    text-align: center;
+}
+.restartBtnHide{
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50%;
+    background-color: blue;
+}
 .showArea{
-    height: 200px;
-    width: 140px;
+    height: 400rpx;
+    width: 280rpx;
     display: flex;
     flex-direction: column;
 }
 .cardCountsA{
     text-align: center;
     transform: rotate(180deg);
+    
+    font-weight: bold;
+    color: #fff;
 }
 .cardCountsB{
     text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.cardCounts{
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
 }
 /*按钮区域*/
+
+
 .buttonShow{
     display: flex;
     justify-content: center;
-    margin: 10px;
-    height: 30px;
+    margin: 20rpx;
+    height: 60rpx;
 }
 .buttonHide{
-    margin: 10px;
-    height: 30px;
+    margin: 20rpx;
+    height: 60rpx;
 }
 .confirmButtonA{
     background-color:rgb(117, 117, 209);
     transform: rotate(180deg);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 .confirmButtonB{
     background-color:rgb(117, 117, 209);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 
 .cancelButtonA{
     background-color:rgb(117, 117, 209);
     transform: rotate(180deg);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 .cancelButtonB{
     background-color:rgb(117, 117, 209);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 .disableA{
     pointer-events: none;
     background-color:rgb(126, 126, 128);
     transform: rotate(180deg);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 .disableB{
     pointer-events: none;
     background-color:rgb(126, 126, 128);
-    margin: 5px;
+    margin: 10rpx;
+    border-radius: 6rpx;
 }
 
 

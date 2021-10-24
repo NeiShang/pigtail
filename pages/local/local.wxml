@@ -1,23 +1,26 @@
-
+<image class='background' src="/images/local.jpg" mode="aspectFill"></image>
 <view class="mainContainer">
     <view >
         <view class="playerA">
             <view class="userInfo">
                 <image class="{{pickPlayerA?'yourTurn':'avatar'}}" src="/images/4.jpg" />
-                <text class="userName">郝攸宿</text>
             </view>
             <view class="handCardAreaA">
                 <view class="cardSlot" data-index="Spade" data-player="A" bindtap="clickPlayerCard">
                     <image src="{{playerASpade}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerASpadeCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Heart" data-player="A" bindtap="clickPlayerCard">
                     <image src="{{playerAHeart}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerAHeartCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Club" data-player="A" bindtap="clickPlayerCard">
                     <image src="{{playerAClub}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerAClubCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Diomond" data-player="A" bindtap="clickPlayerCard">
                     <image src="{{playerADiomond}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerADiomondCount}}</view>
                 </view>
             </view>
         </view>
@@ -35,14 +38,18 @@
 
     <view class="cardArea">
         <view class="cardPool" bindtap="clickCard">
-            <view class="cardCountsA">{{turn}}</view>
+            <view class="cardCountsA">{{cardPoolCount}}</view>
             <image src="{{cardPoolImage}}" mode="aspectFit" class="image"/>
-            <view class="cardCountsB">张数</view>
+            <view class="cardCountsB">{{cardPoolCount}}</view>
+        </view>
+        <view class="restartArea">
+            <view class="restartBtn" wx:if="{{end==true}}" bindtap="start">重新\n开始</view>
+            
         </view>
         <view class="showArea">
-            <view class="cardCountsA">张数</view>
+            <view class="cardCountsA">{{cardShowCount}}</view>
             <image src="{{showAreaImage}}" mode="aspectFit" class="image"/>
-            <view class="cardCountsB">张数</view>
+            <view class="cardCountsB">{{cardShowCount}}</view>
         </view>
     </view>
     
@@ -58,20 +65,23 @@
         <view class="playerB">
             <view class="userInfo">
                 <image class="{{pickPlayerB?'yourTurn':'avatar'}}" src="/images/5.jpg" />
-                <text class="userName">邱美丽</text>
             </view>
             <view class="handCardAreaB">
                 <view class="cardSlot" data-index="Spade" data-player="B" bindtap="clickPlayerCard">
                     <image src="{{playerBSpade}}" mode="scaleToFill" class="image"/>
+                    <view class="cardCounts">{{playerBSpadeCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Heart" data-player="B" bindtap="clickPlayerCard">
                     <image src="{{playerBHeart}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerBHeartCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Club" data-player="B" bindtap="clickPlayerCard">
                     <image src="{{playerBClub}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerBClubCount}}</view>
                 </view>
                 <view class="cardSlot" data-index="Diomond" data-player="B" bindtap="clickPlayerCard">
-                    <image src="{{playerBDiomond}}" mode="aspectFit" class="imageTest"/>
+                    <image src="{{playerBDiomond}}" mode="aspectFit" class="image"/>
+                    <view class="cardCounts">{{playerBDiomondCount}}</view>
                 </view>
             </view>
         </view>

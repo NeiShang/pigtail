@@ -27,6 +27,11 @@ Page({
                         key:"token",
                         data:res.data.data.token
                     })
+                    console.log(res.data.data.detail.name)
+                    wx.setStorage({
+                        key:"name",
+                        data:res.data.data.detail.name,
+                    })
                     wx.redirectTo({
                         url:"/pages/gamelobby/gamelobby"
                     })

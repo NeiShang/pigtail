@@ -18,23 +18,23 @@ page{
 
 /*用户信息*/
 .userInfo{
-    height: 50px;
-    width: 110px;
-    margin-top: 20px;
+    height: 100rpx;
+    width: 220rpx;
+    margin-top: 40rpx;
     display: flex;
 }
 .avatar{
-    height: 50px;
-    width: 50px;
+    height: 100rpx;
+    width: 100rpx;
     border-radius: 50%;
 }
 .userName{
-    line-height: 50px;
-    margin-left: 10px;
+    line-height: 100rpx;
+    margin-left: 20rpx;
 }
 .yourTurn{
-    height: 50px;
-    width: 50px;
+    height: 100rpx;
+    width: 100rpx;
     border-radius: 50%;
     border:1px solid rgb(61, 71, 214);
 }
@@ -42,20 +42,20 @@ page{
 /*手牌区*/
 .player{
     display: flex;
-    margin: 20px;
+    margin: 40rpx;
 }
 .handCardArea{
-    height: 100px;
-    width: 250px;
+    height: 200rpx;
+    width: 500rpx;
     background-color:rgb(255, 255, 255);
     display: flex;
 }
 .cardSlot{
-    width: 52px;
-    height: 75px;
-    margin: 5px;
+    width: 104rpx;
+    height: 150rpx;
+    margin: 10rpx;
     background-color: pink;
-    border-radius: 4px;
+    border-radius: 8rpx;
 }
 /*牌堆与卡池*/
 .cardArea{
@@ -63,15 +63,15 @@ page{
     justify-content: space-around;
 }
 .cardPool{
-    height: 200px;
-    width: 140px;
+    height: 400rpx;
+    width: 280rpx;
     /* display: flex;
     flex-direction: column; */
 
 }
 .showArea{
-    height: 200px;
-    width: 140px;
+    height: 400rpx;
+    width: 280rpx;
     /* display: flex;
     flex-direction: column; */
 }
@@ -82,26 +82,26 @@ page{
 .buttonShow{
     display: flex;
     justify-content: center;
-    margin: 10px;
-    height: 30px;
+    margin: 20rpx;
+    height: 60rpx;
 }
 .buttonHide{
-    margin: 10px;
-    height: 30px;
+    margin: 20rpx;
+    height: 60rpx;
 }
 .confirmButton{
     background-color:rgb(117, 117, 209);
-    margin: 5px;
+    margin: 10rpx;
 }
 
 .cancelButton{
     background-color:rgb(117, 117, 209);
-    margin: 5px;
+    margin: 10rpx;
 }
 .disable{
     pointer-events: none;
     background-color:rgb(126, 126, 128);
-    margin: 5px;
+    margin: 10rpx;
 }
 
 

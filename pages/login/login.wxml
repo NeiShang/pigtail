@@ -1,6 +1,6 @@
 <view class="container"> 
-  <view> 
-    <image class="loginImg" src="/images/loginLog.jpg"></image> 
+  <view class="imageContainer"> 
+    <image class="loginImg" src="/images/loginbackground.png"></image> 
   </view> 
   
   <view class="loginFrom"> 
@@ -21,7 +21,7 @@
       <button class="loginBtn" type="primary" bindtap="login">登录</button> 
     </view> 
     <navigator url="/pages/local/local" open-type="navigate">
-      <view class="localGame" hover-class="localHover">本地游戏</view>
+      <button class="localBtn" type="primary" plain="{{true}}">本地游戏</button>
     </navigator>
   </view> 
   

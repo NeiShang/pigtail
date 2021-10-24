@@ -11,36 +11,45 @@ page{
     background-color: #FFFFFF;
 }  
 
+.imageContainer{
+    display:flex;                    
+    justify-content: center;        
+    align-items:center;                
+    width: 750rpx;
+    height: 750rpx;
+}
 .loginImg{ 
-    width: 750rpx; 
+
+    height: 250rpx;
+    width: 250rpx;
 } 
 
 /*表单内容*/ 
 .loginFrom { 
-    margin-top: 20px; 
+    margin-top: 40rpx; 
     flex: auto; 
     height:100%; 
 } 
 
 .inputView { 
     background-color: #fff; 
-    line-height: 44px;
+    line-height: 88rpx;
 } 
 
 /*输入框*/ 
 .loginLab { 
-    margin: 15px 15px 15px 10px; 
+    margin: 30rpx 30rpx 30rpx 20rpx; 
     color: #545454; 
-    font-size: 14px;
+    font-size: 28rpx;
 } 
 .inputText { 
     flex: block; 
     float: right; 
     text-align: right; 
-    margin-right: 22px; 
-    margin-top: 11px; 
+    margin-right: 44rpx; 
+    margin-top: 22rpx; 
     color: #545454; 
-    font-size: 14px ;
+    font-size: 28rpx ;
     border-bottom: 1px solid;
 } 
 
@@ -53,15 +62,10 @@ page{
 
 .loginBtn { 
     width: 80%; 
-    margin-top: 35px;
+    margin-top: 70rpx;
 } 
-.localGame{
-    text-decoration: underline;
-    text-align: right;
-}
-.localHover{
-    color:#1E90FF;
-    background-color: #FFFFFF;
+.localBtn{
+    margin-top: 30rpx;
 }
 
 

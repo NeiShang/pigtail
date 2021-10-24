@@ -2,7 +2,7 @@
     <image class='background' src="/images/background.jpg" mode="aspectFill"></image>
     <view class="userInfo">
         <image class="avatar" src="/images/4.jpg" />
-        <text class="userName">郝攸宿</text>
+        <text class="userName">{{name}}</text>
     </view>
 
     <view class="container">

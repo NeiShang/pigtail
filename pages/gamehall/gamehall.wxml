@@ -1,9 +1,8 @@
 <image class='background' src="/images/gamehall.jpg" mode="aspectFill"></image>
 <view class="container">
     <view class="topBar">
-        <view class="headline">游戏大厅</view>
-        <view >
-            <view class="createRoom" hover-class="small" hover-stay-time="50" bindtap="createRoom">创建房间</view>
+        <view class="createRoom" hover-class="small" hover-stay-time="50" bindtap="createRoom">创建房间</view>
+        <view class="radioGroup">
             <radio-group bindchange="bandleChange" name="radio">
                 <radio value="public" checked="{{true}}"> 公有</radio>
                 <radio value="private"> 私有</radio>
@@ -19,8 +18,10 @@
 
     <view class="roomList" >
         <view class="roomStyle" wx:for="{{roomList}}" bindtap="joinRoom" data-number="{{index}}">
-            <view >房主：{{item.host_id}}</view>
-            <view >玩家：{{item.client_id}}</view>
+            <view class="roomInfo">
+                <view >房主：{{item.host_id}}</view>
+                <view >玩家：{{item.client_id}}</view>
+            </view>
         </view>
     </view>
        

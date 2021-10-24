@@ -6,56 +6,65 @@
     z-index: -1;
 }
 .userInfo{
-    padding: 20px;
-    height: 50px;
-    width: 150px;
+    padding: 40rpx;
+    height: 100rpx;
+    width: 300rpx;
     display: flex;
 }
 .avatar{
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 50rpx;
 }
 .userName{
-    line-height: 50px;
+    padding-left: 30rpx;
+    line-height: 100rpx;
 }
 
 .localGame{
-    border-radius: 20px;
-    height: 80px;
-    width: 150px;
+    border-radius: 40rpx;
+    height: 140rpx;
+    width: 300rpx;
     text-align: center;
-    background:linear-gradient(to bottom, #6a7eda,#4a4cbe);/*设置按钮为渐变颜色*/
+    background-color: rgb(116, 191, 235);
+    
     border:1px solid #77b3eb;
-    margin: 10px;
+    margin: 20rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
 }
 .onlineGame{
-    border-radius: 20px;
-    height: 80px;
-    width: 150px;
+    border-radius: 40rpx;
+    height: 140rpx;
+    width: 300rpx;
     text-align: center;
     background-color: rgb(116, 191, 235);
-    margin: 10px;
+    margin: 20rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
 }
 .aiGame{
-    border-radius: 20px;
-    height: 80px;
-    width: 150px;
+    border-radius: 40rpx;
+    height: 140rpx;
+    width: 300rpx;
     text-align: center;
-    background-color: rgb(116, 191, 235);
-    margin: 10px;
+    /* background:linear-gradient(to bottom, #7e91e7,#6c6ed6);设置按钮为渐变颜色 */
+    background-color: rgb(102, 186, 235);
+    margin: 20rpx;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
 }
 
 .container{
